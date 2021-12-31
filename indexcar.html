@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poject animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .hero {
+
+            height: 100vh;
+            width: 100%;
+            background-image: url("img/sky.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .highway {
+            height: 200px;
+            width: 500%;
+            display: block;
+            background-image: url("img/road.jpg");
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: road 5s linear infinite;
+        }
+
+        @keyframes road {
+            100% {
+                transform: translate(-3400px);
+            }
+
+        }
+
+        .city {
+            height: 250px;
+            width: 500%;
+            display: block;
+            background-image: url("img/city.png");
+            position: absolute;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            background-repeat: repeat-x;
+            z-index: 1;
+            animation: citt 20s linear infinite;
+           
+            box-shadow: 1px 150px 41px -72px #0c0a0a8a;
+
+        }
+
+        @keyframes citt {
+            100% {
+                transform: translate(-1400px)
+            }
+        }
+
+        .car {
+
+            width: 400px;
+            left: 50%;
+            bottom: 150px;
+            transform: translate(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .car img {
+            width: 60%;
+            filter: invert(100);
+            box-shadow: 2px 43px 17px -25px rgb(255, 255, 255);
+        }
+
+        .carr {
+            width: 400px;
+            left: 100%;
+            bottom: 100px;
+            transform: translate(-100%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .carr img {
+            width: 60%;
+            box-shadow: 2px 43px 17px -25px black;
+        }
+
+        .wheel {
+            left: 22%;
+            bottom: 210px;
+            transform: translate(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel img {
+            width: 45px;
+            height: 45px;
+            animation: wheell 1s linear infinite;
+        }
+
+        .front {
+            top: 8px;
+            left: 350px;
+            position: absolute;
+        }
+
+        .bacck {
+            top: 8px;
+            left: 202px;
+            position: absolute;
+        }
+
+        @keyframes wheell {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .frontt {
+            top: 59px;
+            left: 832px;
+            position: absolute;
+        }
+
+        .back {
+            top: 59px;
+            left: 685px;
+            position: absolute;
+        }
+
+        .airplane {
+
+            top: 59px;
+            right: 0;
+            position: absolute;
+            z-index: 3;
+            animation: air 15s linear infinite;
+            transform-origin: 100% 50%;
+            /*filter: opacity(0.5);*/
+            filter: drop-shadow(247px 513px 13px black);
+        }
+
+        @keyframes air {
+            0% {
+
+                transform: translateX(0px);
+            }
+
+            30% {
+                transform: translateX(-500px);
+            }
+
+            100% {
+                transform: translateX(-1500px) translateY(-100px) rotate(20deg);
+
+            }
+        }
+
+        .airplane img {
+            width: 150px;
+            height: 50px;
+
+        }
+
+        /*  .heading{
+            color: rgb(238, 234, 234);
+            z-index: 2;
+            border: 1px solid white;
+            position: relative;
+            left: 600px;
+            font-size: 15px;
+            background-blend-mode: overlay;
+            background-color: rgb(53, 53, 77);
+            animation: wed 2s infinite;
+
+        }
+        @keyframes wed {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 1400px;
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="highway">
+
+        </div>
+
+        <div class="city">
+
+        </div>
+        <div class="car">
+            <img src="img/car.png">
+        </div>
+        <div class="wheel">
+
+            <img src="img/wheel.png" class="front">
+            <img src="img/wheel.png" class="bacck">
+
+
+
+        </div>
+
+        <div class="carr">
+            <img src="img/car.png">
+        </div>
+        <div class="wheel">
+
+            <img src="img/wheel.png" class="frontt">
+            <img src="img/wheel.png" class="back">
+
+
+
+        </div>
+
+    </div>
+    <div class="airplane">
+        <img src="img/airplane.png">
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
